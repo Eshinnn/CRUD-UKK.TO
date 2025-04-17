@@ -1,0 +1,44 @@
+Ketika halaman Data Barang dibuka,  
+sistem akan memulai koneksi  
+ke database dan menyiapkan  
+mekanisme pembagian data (pagination)  
+dengan menentukan jumlah baris  
+per halaman serta menghitung offset  
+berdasarkan parameter halaman saat ini.  
+
+Selanjutnya, semua kategori diambil  
+untuk disajikan di dropdown filter,  
+dan jika terdapat input pencarian  
+atau pilihan kategori, kondisi WHERE  
+akan dibuat agar query hanya  
+mengembalikan baris yang sesuai.  
+
+Data barang kemudian diambil  
+dengan menggabungkan tabel barang  
+dan kategori, lalu diurutkan  
+berdasarkan ID secara menurun  
+untuk memastikan entri terbaru  
+tampil terlebih dahulu.  
+
+Di sisi antarmuka, jika URL  
+membawa parameter pesan, notifikasi  
+berupa alert akan muncul  
+untuk menyampaikan hasil aksi  
+sebelumnya (misalnya penambahan atau  
+penghapusan data).  
+
+Form pencarian dan filter  
+memudahkan pencarian nama barang  
+dan penyaringan berdasarkan kategori,  
+sedangkan tombol–tombol aksi menyediakan  
+fungsi tambah barang, hapus semua  
+data dengan konfirmasi, dan ekspor CSV  
+untuk mengunduh data.  
+
+Hasil query ditampilkan dalam tabel  
+dengan kolom-kolom utama (No, Nama,  
+Kategori, Stok, Harga, Tanggal Masuk)  
+dan tombol edit/hapus di  
+setiap baris, serta navigasi pagination  
+di bagian bawah agar perpindahan  
+antar halaman data lebih mudah.  
